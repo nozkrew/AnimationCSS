@@ -23,9 +23,12 @@
 
 @keyframes grossissement {
     50%{
-        width: 300px;
-        height: 150px;
+        transform: scale(1.5, 1.5);
     }
+    to{
+        transform: none;
+    }
+
 }
 
 /* Apparition */
@@ -139,4 +142,52 @@
         opacity: 1;
         transform: none;
     }
+}
+
+/* Elastique horizontal */
+@keyframes elastiqueHorizontal {
+    50%{
+        transform: scale(3, 0.5);
+    }
+    70%{
+        transform: scale(0.5, 1.5);
+    }
+    80%{
+        transform: scale(1.3, 0.7);
+    }
+    90%{
+        transform: scale(0.7, 1.3);
+    }
+    to{
+        transform: none;
+    }
+}
+
+.elastiqueHorizontal{
+    animation-name: elastiqueHorizontal;
+    animation-duration: 1s;
+}
+
+/* Distortion */
+@keyframes distortion {
+    20%{
+        transform: skewY(20deg);
+    }
+    40%{
+        transform: skewY(-20deg);
+    }
+    60%{
+        transform: skewY(20deg);
+    }
+    80%{
+        transform: skewY(-20deg);
+    }
+    to{
+        transform: none;
+    }
+}
+
+.distortion{
+    animation-name: distortion;
+    animation-duration: 1s;
 }
