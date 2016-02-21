@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="lib/jquery-2.2.0.min.js"></script>
+    <title>Animations</title>
+</head>
+<body>
+    <div class="container">
+        <div id="animation">
+
+        </div>
+    </div>
+    <div class="actions">
+        <select id="select-animate">
+            <option data-class-anim="grossissement">Grossissement</option>
+            <option data-class-anim="apparition">Apparition</option>
+            <option data-class-anim="clignotement">Clignotement</option>
+            <option data-class-anim="looping">Looping</option>
+            <option data-class-anim="secousse">Secousse</option>
+        </select>
+        <button id="btn-animate">Animate</button>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btn-animate").click(function(){
+                $('#animation').removeClass().addClass($("#select-animate option:selected").data("class-anim")).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

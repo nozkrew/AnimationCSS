@@ -1,0 +1,91 @@
+.container{
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+#animation{
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+
+.actions{
+    text-align: center;
+}
+
+/*  Grossissement   */
+
+.grossissement{
+    animation-name: grossissement;
+    animation-duration: 1s;
+}
+
+@keyframes grossissement {
+    50%{
+        width: 300px;
+        height: 150px;
+    }
+}
+
+/* Apparition */
+
+.apparition{
+    animation-name: apparition;
+    animation-duration: 1s;
+}
+
+@keyframes apparition {
+    from{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Clignotement */
+
+.clignotement{
+    animation-name: clignotement;
+    animation-duration: 1s;
+}
+
+@keyframes clignotement {
+    from, 50%{
+        opacity: 1;
+    }
+    25%, 75%{
+        opacity: 0;
+    }
+}
+
+/* Looping */
+
+@keyframes looping {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.looping{
+    animation-name: looping;
+    animation-duration: 1s;
+}
+
+/* Secousse */
+
+@keyframes secousse {
+    10%, 30%, 50%, 70%, 90%{
+        transform: rotate(10deg);
+    }
+    20%, 40%, 60%, 80%{
+        transform: rotate(-10deg);
+    }
+}
+
+.secousse{
+    animation-name: secousse;
+    animation-duration: 1s;
+}
